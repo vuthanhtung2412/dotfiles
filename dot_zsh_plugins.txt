@@ -4,6 +4,9 @@ Aloxaf/fzf-tab
 MichaelAquilina/zsh-you-should-use
 getantidote/use-omz
 ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/chezmoi
+ohmyzsh/ohmyzsh path:plugins/mise
+ohmyzsh/ohmyzsh path:plugins/rbw
 ohmyzsh/ohmyzsh path:plugins/docker
 ohmyzsh/ohmyzsh path:plugins/kubectl
 ohmyzsh/ohmyzsh path:plugins/kubectx
