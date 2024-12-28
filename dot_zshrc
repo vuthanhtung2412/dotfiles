@@ -16,6 +16,44 @@ srm() {
   gio trash $1
 }
 
+# Backup a file
+backup_file() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: backup_file <file-path>"
+    return 1
+  fi
+
+  local file="$1"
+  local backup="${file}.bak"
+
+  if [[ -e "$file" ]]; then
+    mv "$file" "$backup"
+    echo "Backup created: $backup"
+  else
+    echo "Error: File '$file' does not exist."
+    return 1
+  fi
+}
+
+# Restore a backup
+restore_file() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: restore_file <file-path>.bak"
+    return 1
+  fi
+
+  local backup="$1"
+  local file="${backup%.bak}"
+
+  if [[ -e "$backup" ]]; then
+    mv "$backup" "$file"
+    echo "File restored: $file"
+  else
+    echo "Error: Backup file '$backup' does not exist."
+    return 1
+  fi
+}
+
 # https://github.com/jesseduffield/lazygit?tab=readme-ov-file#changing-directory-on-exit
 lg() {
   export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
