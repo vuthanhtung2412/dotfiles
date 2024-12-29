@@ -12,10 +12,6 @@ alias ef='env | fzf'
 alias efc='env | fzf | cc'
 alias hfc='history | fzf | cp'
 
-srm() {
-  gio trash $1
-}
-
 # Backup a file
 backup_file() {
   if [[ -z "$1" ]]; then
