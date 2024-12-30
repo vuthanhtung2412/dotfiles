@@ -80,7 +80,7 @@ function y() {
   rm -f -- "$tmp"
 }
 
-eval "$(oh-my-posh init bash --config /home/tung/.config/oh-my-posh/config.json)"
+eval "$(oh-my-posh init bash --config $HOME/.config/oh-my-posh/config.json)"
 eval "$(mise activate bash)"
 
 # eza set up
