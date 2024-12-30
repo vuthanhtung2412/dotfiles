@@ -1,3 +1,4 @@
+# TODO: This .bashrc only work with Linux for now
 alias gc='gcloud'
 alias nv='nvim'
 alias pev='open $HOME/.local/bin/pev.html'
@@ -6,6 +7,7 @@ alias q='exit'
 alias e='exit'
 alias o='open'
 alias c='clear'
+# TODO: make it works with MacOS
 alias -- cc='xclip -selection clipboard'    # copy command output to clipboard
 alias -- cp='xclip -selection clipboard -o' # paste from clipboard
 alias ef='env | fzf'
