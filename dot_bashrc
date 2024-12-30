@@ -80,7 +80,7 @@ function y() {
   rm -f -- "$tmp"
 }
 
-eval "$(oh-my-posh init bash --config /home/tung/.config/oh-my-posh/config.json)"
+eval "$(oh-my-posh init bash --config $HOME/.config/oh-my-posh/config.json)"
 eval "$(mise activate bash)"
 
 # eza set up
@@ -104,9 +104,10 @@ shopt -s extglob
 shopt -s globstar
 shopt -s checkjobs
 
-if [[ ! -v BASH_COMPLETION_VERSINFO ]]; then
-  . "/nix/store/0zmgwbn1h48qrk6xn3qdbj2xm8vpk1n7-bash-completion-2.14.0/etc/profile.d/bash_completion.sh"
-fi
+# TODO: install bash-completion with nix
+# if [[ ! -v BASH_COMPLETION_VERSINFO ]]; then
+#   . "/nix/store/0zmgwbn1h48qrk6xn3qdbj2xm8vpk1n7-bash-completion-2.14.0/etc/profile.d/bash_completion.sh"
+# fi
 
 if test -n "$KITTY_INSTALLATION_DIR"; then
   export KITTY_SHELL_INTEGRATION="no-rc"
