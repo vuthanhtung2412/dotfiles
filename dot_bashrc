@@ -6,7 +6,7 @@ alias q='exit'
 alias e='exit'
 alias o='open'
 alias c='clear'
-alias -- cc='xclip -selection clipboard' # copy command output to clipboard
+alias -- cc='xclip -selection clipboard'    # copy command output to clipboard
 alias -- cp='xclip -selection clipboard -o' # paste from clipboard
 alias ef='env | fzf'
 alias efc='env | fzf | cc'
@@ -56,7 +56,7 @@ lg() {
   lazygit "$@"
   if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
     cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-    rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    rm -f $LAZYGIT_NEW_DIR_FILE >/dev/null
   fi
 }
 
@@ -80,7 +80,7 @@ function y() {
   rm -f -- "$tmp"
 }
 
-eval "$(oh-my-posh init bash --config $HOME/.config/oh-my-posh/config.json)"
+eval "$(oh-my-posh init bash --config /home/tung/.config/oh-my-posh/config.json)"
 eval "$(mise activate bash)"
 
 # eza set up
@@ -104,10 +104,10 @@ shopt -s extglob
 shopt -s globstar
 shopt -s checkjobs
 
-# TODO: install bash-completion with nix
-# if [[ ! -v BASH_COMPLETION_VERSINFO ]]; then
-#   . "/nix/store/0zmgwbn1h48qrk6xn3qdbj2xm8vpk1n7-bash-completion-2.14.0/etc/profile.d/bash_completion.sh"
-# fi
+# TODO: learn how to use bash-completion
+# [[ -f $HOME/.nix-profile/share/bash-completion/bash_completion ]] &&
+#   echo "completion recognized" &&
+#   . "$HOME/.nix-profile/share/bash-completion/bash_completion"
 
 if test -n "$KITTY_INSTALLATION_DIR"; then
   export KITTY_SHELL_INTEGRATION="no-rc"
