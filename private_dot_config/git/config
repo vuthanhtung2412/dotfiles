@@ -1,5 +1,6 @@
 [core]
 	excludesfile = "~/.gitignore_global"
+  pager = delta
 
 [pull]
   rebase = false
@@ -13,3 +14,15 @@
 [user]
 	email = "vuthanhtung2016hn@gmail.com"
 	name = "vuthanhtung2412"
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+  features = side-by-side line-numbers syntax-highlighting
+  side-by-side = true
+  line-numbers = true
+  syntax-highlighting = always
+
+[merge]
+    conflictstyle = zdiff3
