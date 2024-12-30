@@ -1,3 +1,4 @@
+# TODO: delta not working in mac os
 git:
   paging:
     colorArg: always
