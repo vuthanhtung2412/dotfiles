@@ -73,6 +73,7 @@
   - even though `gsa` seems like a lit it is only one key away from the default `sa`
 - vi? : select inner of custom block (for example that surrounded by `<text></text>`)
   - Normally you can do `vii` since they normally have the same indentation
+- _ : to go the beginning of the line ignore leading white space
 
 ## Useful gesture for a standard text editor
 

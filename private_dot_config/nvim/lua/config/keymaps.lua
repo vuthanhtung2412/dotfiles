@@ -11,8 +11,15 @@ vim.keymap.set({ "n", "v" }, "C", '"_C', { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "D", '"_D', { noremap = true, silent = true })
 vim.keymap.set({ "n" }, "X", '"_X', { noremap = true, silent = true })
 vim.keymap.set({ "n" }, "r", '"_r', { noremap = true, silent = true })
+vim.keymap.set({ "n" }, "yY", "_y$", { noremap = true, silent = true })
+-- inspration : https://stackoverflow.com/a/77247473/14281306
+vim.api.nvim_set_keymap('x', 'il', 'g_o^', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('o', 'il', ':<C-u>normal vil<CR>', { noremap = true, silent = true })
+-- inspration : https://stackoverflow.com/a/16136133
+vim.keymap.set({ "n" }, "oo", "o<ESC>", { noremap = true, silent = true })
+vim.keymap.set({ "n" }, "OO", "O<ESC>", { noremap = true, silent = true })
 -- flash keymaps
 vim.keymap.set({ "n", "x", "o" }, "f", function()
   require("flash").jump()
 end, { desc = "Flash" })
-vim.keymap.set({ "n", "v" }, "F", '<nop>', { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "F", "<nop>", { noremap = true, silent = true })
