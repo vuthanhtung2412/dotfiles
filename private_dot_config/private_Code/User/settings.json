@@ -7,5 +7,6 @@
   "terminal.integrated.sendKeybindingsToShell": true,
   "update.mode": "none",
   "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.lineNumbers": "relative",
 }
