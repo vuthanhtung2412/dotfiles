@@ -9,4 +9,9 @@
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
   "editor.lineNumbers": "relative",
+  "vscode-neovim.compositeKeys": {
+      "jj": {
+          "command": "vscode-neovim.escape",
+      },
+  },
 }
