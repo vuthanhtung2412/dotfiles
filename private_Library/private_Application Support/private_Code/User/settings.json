@@ -1,0 +1,29 @@
+{
+  "editor.accessibilitySupport": "off",
+  "extensions.autoCheckUpdates": false,
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": false,
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.sendKeybindingsToShell": true,
+  "update.mode": "none",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.lineNumbers": "relative",
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')"
+        ]
+      ]
+    }
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "git.autofetch": true,
+  "files.autoSave": "afterDelay"
+}
