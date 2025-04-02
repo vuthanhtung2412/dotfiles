@@ -12,6 +12,21 @@ alias ef='env | fzf'
 alias efc='env | fzf | clipcopy'
 alias hfc='history | fzf | clipcopy'
 
+# Load dotenv file with any name
+source_env() {
+  local envfile="${1:-.env}"
+  
+  if [[ -f "$envfile" ]]; then
+    echo "Sourcing environment variables from $envfile"
+    set -a
+    source "$envfile"
+    set +a
+  else
+    echo "Error: Environment file '$envfile' not found"
+    return 1
+  fi
+}
+
 # Backup a file
 backup_file() {
   if [[ -z "$1" ]]; then
@@ -110,7 +125,6 @@ unsetopt EXTENDED_HISTORY
 # Need to press esc to enter `zsh-vi-mode`
 # tmux vi mode doesn't have the same functionality
 # clipboard integration is in progress
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
 source ~/.nix-profile/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 if [[ $options[zle] = on ]]; then
   fzf_bin=$(which fzf)
