@@ -77,24 +77,17 @@ lg() {
 
 typeset -U path cdpath fpath manpath
 
-# for profile in ${(z)NIX_PROFILES}; do
-#   fpath+=($profile/share/zsh/site-functions $profile/share/zsh/$ZSH_VERSION/functions $profile/share/zsh/vendor-completions)
-# done
-
-# HELPDIR="/nix/store/m7l6yzmflrf9hjs8707lk9nkhi6f73n1-zsh-5.9/share/zsh/$ZSH_VERSION/help"
-HELPDIR="$HOME/.nix-profile/share/zsh/5.9/help"
 
 # antidote in the end is the superior choice. Below is the problem with others plugins manager
-# zinit has problem with completion 
+# zinit has problem with completion
 # OMZ need to git clone to download external completion
 
-## home-manager/antidote begin :
 # Cache resides at : ~/.cache/antidote
 # antidote.zsh at : /home/tung/.nix-profile/share/antidote/antidote.zsh
 
-
-## home-manager/antidote end
-source "$HOME/.nix-profile/share/antidote/antidote.zsh"
+# nix antidote
+# source "$HOME/.nix-profile/share/antidote/antidote.zsh"
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load "$HOME/.zsh_plugins.txt"
 
 ZSH_AUTOSUGGEST_STRATEGY=(history)
@@ -104,9 +97,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history)
 # as all $fpath entries will be traversed again.
 autoload -U compinit && compinit
 
-
 # History options should be set in .zshrc and after oh-my-zsh sourcing.
-# See https://github.com/nix-community/home-manager/issues/177.
 HISTSIZE="10000"
 SAVEHIST="10000"
 
@@ -122,14 +113,14 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
-# Need to press esc to enter `zsh-vi-mode`
-# tmux vi mode doesn't have the same functionality
-# clipboard integration is in progress
-source ~/.nix-profile/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-if [[ $options[zle] = on ]]; then
-  fzf_bin=$(which fzf)
-  zvm_after_init_commands+=("eval \"\$($fzf_bin --zsh)\"")
-fi
+# # Need to press esc to enter `zsh-vi-mode`
+# # tmux vi mode doesn't have the same functionality
+# # clipboard integration is in progress
+# source ~/.nix-profile/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# if [[ $options[zle] = on ]]; then
+#   fzf_bin=$(which fzf)
+#   zvm_after_init_commands+=("eval \"\$($fzf_bin --zsh)\"")
+# fi
 
 source <(fzf --zsh)
 export FZF_CTRL_T_COMMAND="fd --type f"

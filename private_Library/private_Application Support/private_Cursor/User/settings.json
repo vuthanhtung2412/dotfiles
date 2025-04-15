@@ -4,7 +4,7 @@
   "git.confirmSync": false,
   "git.suggestSmartCommit": false,
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
-  "terminal.integrated.sendKeybindingsToShell": true,
+  "terminal.integrated.shellIntegration.enabled": false,
   "update.mode": "none",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
