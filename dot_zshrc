@@ -172,3 +172,6 @@ alias -- lla='eza -la'
 alias -- ls=eza
 alias -- lt='eza --tree'
 export TERM=xterm-256color
+
+---TODOs---
+HOMEBREW_BUNDLE_FILE=$HOME
