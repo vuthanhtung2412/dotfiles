@@ -1,0 +1,14 @@
+// Place your key bindings in this file to override the defaults
+// Cmd + i : toggle AI chat panel
+// Cmd + b : toggle left side bar
+// ^ + ` : toggle terminal
+[
+    {
+        "key": "alt+q",
+        "command": "workbench.action.closeUnmodifiedEditors"
+    },
+    {
+        "key": "cmd+r u",
+        "command": "-workbench.action.closeUnmodifiedEditors"
+    }
+]
