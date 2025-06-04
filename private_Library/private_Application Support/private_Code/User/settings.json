@@ -302,7 +302,7 @@
         "g",
         "g"
       ]
-    },
+    }
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -320,7 +320,7 @@
       "commands": [
         "editor.action.outdentLines"
       ]
-    },
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {

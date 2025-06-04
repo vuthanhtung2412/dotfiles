@@ -1,13 +1,31 @@
 {
+  "nativeMCPServers": {
+    "neovim": {
+      "autoApprove": [
+        "execute_lua",
+        "execute_command",
+        "read_file",
+        "delete_item",
+        "move_item",
+        "find_files",
+        "list_directory",
+        "write_file",
+        "replace_in_file"
+      ]
+    }
+  },
   "mcpServers": {
-    "fetch": {
-      "command": "uvx",
+    "puppeteer": {
+      "command": "npx",
       "args": [
-        "mcp-server-fetch"
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
       ]
     },
     "remote-server": {
-      "url": "https://api.example.com/mcp"
+      "autoApprove": true,
+      "disabled": false,
+      "url": "http://localhost:8000/sse"
     }
   }
 }

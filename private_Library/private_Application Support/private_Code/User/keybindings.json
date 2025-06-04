@@ -1,7 +1,3 @@
-// Place your key bindings in this file to override the defaults
-// Cmd + i : toggle AI chat panel
-// Cmd + b : toggle left side bar
-// ^ + ` : toggle terminal
 [
     {
         "key": "alt+q",
@@ -34,5 +30,5 @@
     {
         "key": "ctrl+j",
         "command": "workbench.action.focusBelowGroup"
-    },
+    }
 ]
