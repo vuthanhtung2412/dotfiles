@@ -35,8 +35,10 @@
   },
   "vim.easymotion": true,
   "vim.incsearch": true,
+  "vim.timeout": 300,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
+  "vim.leader": "<space>",
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
@@ -49,15 +51,83 @@
       ]
     }
   ],
+  "vim.normalModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<leader>",
         "d"
       ],
       "after": [
-        "d",
+        "\"",
+        "_",
         "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "C"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "C"
+      ]
+    },
+    {
+      "before": [
+        "r"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "r"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "|"
+      ],
+      "commands": [
+        "workbench.action.splitEditorRight"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "-"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "-"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
       ]
     },
     {
@@ -70,10 +140,22 @@
     },
     {
       "before": [
-        "K"
+        "O",
+        "O"
       ],
       "commands": [
         "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "o",
+        "o"
+      ],
+      "after": [
+        "o",
+        "<Esc>"
       ],
       "silent": true
     },
@@ -91,6 +173,8 @@
         "D"
       ],
       "after": [
+        "\"",
+        "_",
         "d",
         "$"
       ]
@@ -100,6 +184,8 @@
         "C"
       ],
       "after": [
+        "\"",
+        "_",
         "c",
         "$"
       ]
@@ -115,6 +201,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "d"
       ]
     },
@@ -129,6 +217,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "d"
       ]
     },
@@ -165,6 +255,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "c"
       ]
     },
@@ -179,6 +271,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "c"
       ]
     },
@@ -208,13 +302,8 @@
         "g",
         "g"
       ]
-    }
+    },
   ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
-  },
   "vim.visualModeKeyBindings": [
     {
       "before": [
@@ -230,6 +319,48 @@
       ],
       "commands": [
         "editor.action.outdentLines"
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "C"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "C"
       ]
     }
   ]
