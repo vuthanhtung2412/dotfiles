@@ -170,3 +170,29 @@ alias -- lla='eza -la'
 alias -- ls=eza
 alias -- lt='eza --tree'
 export TERM=xterm-256color
+
+# For nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# For libxml2 installation
+export PATH="/opt/homebrew/opt/libxml2/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/libxml2/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libxml2/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libxml2/lib/pkgconfig"
+
+# For openssl@3 installation
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
+
+# Added by Windsurf
+export PATH="/Users/tung/.codeium/windsurf/bin:$PATH"
+
+# Source secrets
+set -a
+source ~/.env
+set +a
+

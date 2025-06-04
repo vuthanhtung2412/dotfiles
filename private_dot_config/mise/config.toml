@@ -1,5 +1,5 @@
-[env]
-CARGO_TARGET_DIR = "target"
+# [env]
+# CARGO_TARGET_DIR = "target"
 
 [settings]
 env_file = ".env"
