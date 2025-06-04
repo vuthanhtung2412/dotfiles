@@ -190,9 +190,3 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
 
 # Added by Windsurf
 export PATH="/Users/tung/.codeium/windsurf/bin:$PATH"
-
-# Source secrets
-set -a
-source ~/.env
-set +a
-
