@@ -4,7 +4,7 @@
   "git.confirmSync": false,
   "git.suggestSmartCommit": false,
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
-  "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.sendKeybindingsToShell": true,
   "update.mode": "none",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
@@ -22,8 +22,215 @@
     }
   },
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "asvetliakov.vscode-neovim": 1,
+    "vscodevim.vim": 1
   },
   "git.autofetch": true,
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off"
+  },
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "Y"
+      ],
+      "after": [
+        "y",
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "d",
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "C"
+      ],
+      "after": [
+        "c",
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "i",
+        "g"
+      ],
+      "after": [
+        "G",
+        "V",
+        "g",
+        "g",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "d",
+        "a",
+        "g"
+      ],
+      "after": [
+        "G",
+        "V",
+        "g",
+        "g",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "y",
+        "i",
+        "g"
+      ],
+      "commands": [
+        "editor.action.selectAll",
+        "editor.action.clipboardCopyAction"
+      ]
+    },
+    {
+      "before": [
+        "y",
+        "a",
+        "g"
+      ],
+      "commands": [
+        "editor.action.selectAll",
+        "editor.action.clipboardCopyAction"
+      ]
+    },
+    {
+      "before": [
+        "c",
+        "i",
+        "g"
+      ],
+      "after": [
+        "G",
+        "V",
+        "g",
+        "g",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "c",
+        "a",
+        "g"
+      ],
+      "after": [
+        "G",
+        "V",
+        "g",
+        "g",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "i",
+        "g"
+      ],
+      "after": [
+        "G",
+        "$",
+        "v",
+        "g",
+        "g"
+      ]
+    },
+    {
+      "before": [
+        "v",
+        "a",
+        "g"
+      ],
+      "after": [
+        "G",
+        "V",
+        "g",
+        "g"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ]
 }
