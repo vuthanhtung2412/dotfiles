@@ -58,7 +58,16 @@
     {
       "before": [
         "<leader>",
-        "o",
+        "/"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    },
+    {
+      "before": [
+        "f",
+        "f"
       ],
       "commands": [
         "workbench.action.quickOpen"
