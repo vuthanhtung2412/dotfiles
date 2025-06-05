@@ -56,6 +56,13 @@
   "vim.normalModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before" : [
+        "<leader>",
+        "p",
+      ],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
       "before": [
         "d"
       ],
@@ -371,5 +378,6 @@
         "C"
       ]
     }
-  ]
+  ],
+  "python.languageServer": "None"
 }
