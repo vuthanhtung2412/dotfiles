@@ -9,6 +9,7 @@ alias c='clear'
 alias ef='env | fzf'
 alias efc='env | fzf | clipcopy'
 alias hfc='history | fzf | clipcopy'
+alias cm='chezmoi'
 
 # Load dotenv file with any name
 source_env() {
