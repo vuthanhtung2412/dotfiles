@@ -56,11 +56,32 @@
   "vim.normalModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before" : [
+      "before": [
         "<leader>",
         "o",
       ],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r",
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
     },
     {
       "before": [
@@ -379,5 +400,6 @@
       ]
     }
   ],
-  "python.languageServer": "None"
+  "python.languageServer": "None",
+  "git.openRepositoryInParentFolders": "always"
 }
