@@ -8,6 +8,8 @@
   "update.mode": "none",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
+  "editor.cursorSurroundingLines": 15,
+  "editor.cursorSurroundingLinesStyle": "all",
   "editor.lineNumbers": "relative",
   "vscode-neovim.compositeKeys": {
     "jj": {
@@ -228,9 +230,12 @@
         "i",
         "g"
       ],
-      "commands": [
-        "editor.action.selectAll",
-        "editor.action.clipboardCopyAction"
+      "after": [
+        "g",
+        "g",
+        "y",
+        "G",
+        "<C-o>"
       ]
     },
     {
@@ -239,9 +244,12 @@
         "a",
         "g"
       ],
-      "commands": [
-        "editor.action.selectAll",
-        "editor.action.clipboardCopyAction"
+      "after": [
+        "g",
+        "g",
+        "y",
+        "G",
+        "<C-o>"
       ]
     },
     {
