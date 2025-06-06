@@ -57,6 +57,24 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
+        "S",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "s",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
         "K"
       ],
       "commands": [
@@ -70,6 +88,15 @@
       ],
       "commands": [
         "workbench.action.findInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "<leader>"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
       ]
     },
     {
@@ -417,6 +444,9 @@
       ]
     }
   ],
-  "python.languageServer": "None",
   "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "python.analysis.importFormat": "relative",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.languageServer": "Pylance",
 }
