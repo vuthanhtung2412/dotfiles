@@ -57,6 +57,14 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
         "<leader>",
         "/"
       ],
