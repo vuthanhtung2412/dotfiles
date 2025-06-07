@@ -6,7 +6,7 @@
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
   "terminal.integrated.sendKeybindingsToShell": true,
   "update.mode": "none",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "material-icon-theme",
   "editor.cursorSurroundingLines": 15,
   "editor.cursorSurroundingLinesStyle": "all",
@@ -67,6 +67,24 @@
     },
     {
       "before": [
+        "S",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "s",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
         "K"
       ],
       "commands": [
@@ -80,6 +98,15 @@
       ],
       "commands": [
         "workbench.action.findInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "<leader>"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
       ]
     },
     {
@@ -427,6 +454,5 @@
       ]
     }
   ],
-  "python.languageServer": "None",
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
 }

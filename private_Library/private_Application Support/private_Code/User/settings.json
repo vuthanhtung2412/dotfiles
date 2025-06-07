@@ -6,7 +6,7 @@
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
   "terminal.integrated.sendKeybindingsToShell": true,
   "update.mode": "none",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "material-icon-theme",
   "editor.cursorSurroundingLines": 15,
   "editor.cursorSurroundingLinesStyle": "all",
@@ -55,6 +55,16 @@
   ],
   "vim.normalModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
     {
       "before": [
         "S",
@@ -444,9 +454,5 @@
       ]
     }
   ],
-  "git.openRepositoryInParentFolders": "always"
   "git.openRepositoryInParentFolders": "always",
-  "python.analysis.importFormat": "relative",
-  "python.analysis.typeCheckingMode": "standard",
-  "python.languageServer": "Pylance",
 }
