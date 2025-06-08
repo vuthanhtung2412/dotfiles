@@ -3,6 +3,8 @@
 
 [settings]
 env_file = ".env"
+idiomatic_version_file_enable_tools = ["node"]
+experimental = true
 
 [tools]
 go = "1.22"
@@ -10,4 +12,4 @@ java = "21"
 node = "20.18"
 python = "3.12"
 rust = "1.81"
-uv = "0.5"
+uv = "0.7"
