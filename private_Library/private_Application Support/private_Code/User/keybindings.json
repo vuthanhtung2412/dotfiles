@@ -1,3 +1,7 @@
+// Place your key bindings in this file to override the defaults
+// Cmd + i : toggle AI chat panel
+// Cmd + b : toggle left side bar
+// ^ + ` : toggle terminal
 [
     {
         "key": "alt+q",
@@ -30,5 +34,23 @@
     {
         "key": "ctrl+j",
         "command": "workbench.action.focusBelowGroup"
-    }
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
 ]
