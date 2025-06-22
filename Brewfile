@@ -17,7 +17,6 @@ brew "antidote"                      # Zsh plugin manager
 brew "oh-my-posh"                    # Prompt theme engine for shells
 brew "tmux"                          # Terminal multiplexer
 brew "tpm"                           # Tmux plugin manager
-brew "tmate"                         # Share terminal sessions
 brew "zoxide"                        # Smart directory jumper
 brew "eza"                           # Modern ls replacement
 brew "bat"                           # Cat clone with syntax highlighting
@@ -62,7 +61,6 @@ brew "rbw"                           # Bitwarden CLI
 brew "parallel"                      # Parallel command execution
 brew "fd"                            # Fast find alternative
 brew "ripgrep"                       # Fast grep alternative
-brew "ghostscript"                   # PostScript/PDF interpreter (for document processing)
 
 # -------------------
 # Media and Content Tools
@@ -88,7 +86,9 @@ cask "dbeaver-community"             # SQL client and database admin
 # IDEs and Editors
 # -------------------
 cask "visual-studio-code"            # Code editor
-cask "cursor"                        # AI-powered code editor
+# cask "cursor"                        # AI-powered code editor
+# cask "windsurf"                        # AI-powered code editor
+# cask "claude"                        # Claude Code
 
 # -------------------
 # Browsers
@@ -111,6 +111,7 @@ cask "keycastr"                      # Keystroke visualizer (useful for presenta
 # Databases
 # -------------------
 brew "postgresql@14"                 # PostgreSQL database
+brew "sqlite"                 # PostgreSQL database
 
 # -------------------
 # File Navigation and Preview
@@ -120,14 +121,14 @@ brew "yazi"                          # Terminal file manager
 # -------------------
 # VS Code Extensions
 # -------------------
-vscode "asvetliakov.vscode-neovim"    # Neovim integration for VS Code
+vscode "vscodevim.vim"                # Vim integration for VS Code (Neovim is too buggy)
 vscode "golang.go"                    # Go language support
-vscode "kingwl.vscode-vitest-runner"  # Vitest test runner
-vscode "ms-azuretools.vscode-docker"  # Docker support
+vscode "rust-lang.rust-analyzer"      # Rust language server
 vscode "ms-playwright.playwright"     # Playwright testing
 vscode "ms-python.debugpy"            # Python debugger
+vscode "charliermarsh.ruff"           # Python linter (ruff)
 vscode "ms-python.python"             # Python support
 vscode "ms-python.vscode-pylance"     # Python language server
-vscode "ms-vscode-remote.remote-containers"  # Dev containers
-vscode "rust-lang.rust-analyzer"      # Rust language server
+vscode "kingwl.vscode-vitest-runner"  # Vitest test runner
 vscode "vitest.explorer"              # Vitest test explorer
+vscode "ms-azuretools.vscode-docker"  # Docker support
