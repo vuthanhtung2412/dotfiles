@@ -1,1 +1,3 @@
 macos-option-as-alt = true
+theme = catppuccin-mocha
+window-save-state = always
