@@ -1,3 +1,19 @@
+# Banner 
+banner='\033[38;2;255;192;203m
+   ________  ____ ___  ________  ____  __  ________ 
+  ╱        ╲╱   ╱╱   ╲╱        ╲╱    ╲╱  ╲╱        ╲
+ ╱_      __╱   ╱╱    ╱    ╱    ╱         ╱     ____╱
+  ╱     ╱╱╱         ╱         ╱         ╱     ╱_  ╱ 
+  ╲____╱╱ ╲________╱╲________╱╲__╱╲____╱╲________╱ ♡
+       ________  ________  ____ ___  ____ ___  ________ 
+      ╱        ╲╱   ╱╱   ╲╱   ╱╱   ╲╱    ╲╱  ╲╱        ╲
+     ╱    ╱    ╱         ╱   ╱╱    ╱         ╱     ____╱
+    ╱╱      __╱         ╱         ╱         ╱     ╱_  ╱ 
+    ╲╲_____╱  ╲___╱╱___╱╲________╱╲__╱╲____╱╲________╱  
+\033[0m'
+
+echo "$banner" | lolcat --seed 75 -p 2
+
 alias gc='gcloud'
 alias nv='nvim'
 alias pev='open $HOME/.local/bin/pev.html'
@@ -86,8 +102,10 @@ typeset -U path cdpath fpath manpath
 
 # nix antidote
 # source "$HOME/.nix-profile/share/antidote/antidote.zsh"
+
+# Mac antidote
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-antidote load "$HOME/.zsh_plugins.txt"
+antidote load "$HOME/.zsh_plugins.txt" > /dev/null 2>&1
 
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 
@@ -188,6 +206,15 @@ export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
+
+# nvim as default editor
+export EDITOR="nvim"
+
+# thefuck alias
+eval $(thefuck --alias)
+
+# Auto connect to sqlite database if env var is set
+alias sqlite='sqlite3 ${SQLITE_DB_PATH:-}'
 
 # Added by Windsurf
 export PATH="/Users/tung/.codeium/windsurf/bin:$PATH"
