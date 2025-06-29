@@ -3,5 +3,5 @@ theme = catppuccin-mocha
 window-save-state = always
 font-size = 16
 cursor-style = bar
-maximize = true # this is not working
+# maximize = true # this is not working
 # background-opacity = 0.85
