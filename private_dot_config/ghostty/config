@@ -3,5 +3,9 @@ theme = catppuccin-mocha
 window-save-state = always
 font-size = 16
 cursor-style = bar
+# Occupy whole screen
+# https://www.reddit.com/r/Ghostty/comments/1jx9dmq/comment/mms4y6s
+window-width = 9999 
+window-height = 9999
 # maximize = true # this is not working
 # background-opacity = 0.85
