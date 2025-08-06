@@ -2,7 +2,7 @@
 
 ```
 chezmoi init --apply vuthanhtung2412
-brew bunle install
+brew bundle install
 ```
 # Mac further config
 
