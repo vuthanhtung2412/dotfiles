@@ -65,8 +65,9 @@ brew "websocat"                      # WS testing tool
 # -------------------
 # Media and Content Tools
 # -------------------
-brew "ffmpeg"                        # Audio/video processing
+# brew "ffmpeg"                        # Audio/video processing
 brew "yt-dlp"                        # YouTube video downloader
+brew "pdfcpu"                        # CLI pdf editor
 # cask "capcut"                        # Video editing software
 # cask "blender"                       # 3D creation suite
 # cask "obs"                           # Streaming/recording software
