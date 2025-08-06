@@ -11,7 +11,8 @@ brew "mise"                          # Version manager for programming languages
 # -------------------
 # Terminal and Shell Enhancements
 # -------------------
-cask "kitty"                         # Fast, GPU-accelerated terminal emulator
+# cask "kitty"                       # Fast, GPU-accelerated terminal emulator
+cask "ghostty"                       # Kitty doesn't support dictation
 cask "warp"                          # Modern, Rust-based terminal with AI features
 brew "antidote"                      # Zsh plugin manager
 brew "oh-my-posh"                    # Prompt theme engine for shells
@@ -61,6 +62,7 @@ brew "rbw"                           # Bitwarden CLI
 brew "parallel"                      # Parallel command execution
 brew "fd"                            # Fast find alternative
 brew "ripgrep"                       # Fast grep alternative
+brew "websocat"                      # WS testing tool
 
 # -------------------
 # Media and Content Tools
@@ -76,10 +78,10 @@ cask "obs"                           # Streaming/recording software
 # Productivity Tools
 # -------------------
 cask "raycast"                       # Launcher and productivity tool
-cask "homerow"                       # Keyboard navigation enhancer
-cask "rectangle"                     # Window manager
+# cask "rectangle"                     # Window manager (Optional since raycast has similar features)
 cask "obsidian"                      # Knowledge base and note-taking
-cask "bruno"                         # API client (alternative to Postman, complements hurl)
+# cask "bruno"                       # API client (alternative to Postman, complements hurl)
+cask "hoppscotch"                    # API client (alternative to Postman, complements hurl)
 cask "dbeaver-community"             # SQL client and database admin
 
 # -------------------
@@ -131,4 +133,4 @@ vscode "ms-python.python"             # Python support
 vscode "ms-python.vscode-pylance"     # Python language server
 vscode "kingwl.vscode-vitest-runner"  # Vitest test runner
 vscode "vitest.explorer"              # Vitest test explorer
-vscode "ms-azuretools.vscode-docker"  # Docker support
+# vscode "ms-azuretools.vscode-docker"  # Docker support (I frequently use Docker CLI instead)
