@@ -13,7 +13,6 @@ brew "mise"                          # Version manager for programming languages
 # -------------------
 # cask "kitty"                       # Fast, GPU-accelerated terminal emulator
 cask "ghostty"                       # Kitty doesn't support dictation
-cask "warp"                          # Modern, Rust-based terminal with AI features
 brew "antidote"                      # Zsh plugin manager
 brew "oh-my-posh"                    # Prompt theme engine for shells
 brew "tmux"                          # Terminal multiplexer
@@ -27,19 +26,19 @@ brew "thefuck"                       # Corrects previous command typos
 brew "btop"                          # Resource monitor
 
 # -------------------
-# DevOps and Cloud Tools
+# DevOps and Cloud Tools (uncomment what you need)
 # -------------------
-cask "docker"                        # Container platform
-cask "google-cloud-sdk"              # GCP CLI tools
-brew "awscli"                        # AWS CLI
-brew "azure-cli"                     # Azure CLI
-brew "kubectl"                       # Kubernetes CLI
-brew "kubectx"                       # Kubernetes context switcher
-brew "k9s"                           # Kubernetes TUI
-brew "helm"                          # Kubernetes package manager
-brew "hashicorp/tap/terraform"       # Infrastructure as Code
-brew "lazydocker"                    # Docker TUI
-brew "temporal"                      # Workflow orchestration CLI
+# cask "docker"                        # Container platform
+# cask "google-cloud-sdk"              # GCP CLI tools
+# brew "awscli"                        # AWS CLI
+# brew "azure-cli"                     # Azure CLI
+# brew "kubectl"                       # Kubernetes CLI
+# brew "kubectx"                       # Kubernetes context switcher
+# brew "k9s"                           # Kubernetes TUI
+# brew "helm"                          # Kubernetes package manager
+# brew "hashicorp/tap/terraform"       # Infrastructure as Code
+# brew "lazydocker"                    # Docker TUI
+# brew "temporal"                      # Workflow orchestration CLI
 
 # -------------------
 # Development Tools
@@ -57,7 +56,6 @@ brew "tree"                          # Directory tree viewer
 brew "jq"                            # JSON processor
 brew "yq"                            # YAML processor
 brew "hurl"                          # HTTP request tester
-brew "ethancarlsson/openapi-to-hurl/openapi-to-hurl"  # Convert OpenAPI to Hurl
 brew "rbw"                           # Bitwarden CLI
 brew "parallel"                      # Parallel command execution
 brew "fd"                            # Fast find alternative
@@ -69,9 +67,9 @@ brew "websocat"                      # WS testing tool
 # -------------------
 brew "ffmpeg"                        # Audio/video processing
 brew "yt-dlp"                        # YouTube video downloader
-cask "capcut"                        # Video editing software
-cask "blender"                       # 3D creation suite
-cask "obs"                           # Streaming/recording software
+# cask "capcut"                        # Video editing software
+# cask "blender"                       # 3D creation suite
+# cask "obs"                           # Streaming/recording software
 # Note: DaVinci Resolve not available via Homebrew; install manually
 
 # -------------------
@@ -80,17 +78,16 @@ cask "obs"                           # Streaming/recording software
 cask "raycast"                       # Launcher and productivity tool
 # cask "rectangle"                     # Window manager (Optional since raycast has similar features)
 cask "obsidian"                      # Knowledge base and note-taking
-# cask "bruno"                       # API client (alternative to Postman, complements hurl)
-cask "hoppscotch"                    # API client (alternative to Postman, complements hurl)
-cask "dbeaver-community"             # SQL client and database admin
+# cask "hoppscotch"                    # API client (alternative to Postman, complements hurl)
+# cask "dbeaver-community"             # SQL client and database admin
 
 # -------------------
 # IDEs and Editors
 # -------------------
 cask "visual-studio-code"            # Code editor
 # cask "cursor"                        # AI-powered code editor
-# cask "windsurf"                        # AI-powered code editor
-# cask "claude"                        # Claude Code
+# npm install -g @anthropic-ai/claude-code
+# brew codex
 
 # -------------------
 # Browsers
@@ -112,7 +109,7 @@ cask "keycastr"                      # Keystroke visualizer (useful for presenta
 # -------------------
 # Databases
 # -------------------
-brew "postgresql@14"                 # PostgreSQL database
+# brew "postgresql@14"                 # PostgreSQL database
 brew "sqlite"                 # PostgreSQL database
 
 # -------------------
@@ -121,16 +118,16 @@ brew "sqlite"                 # PostgreSQL database
 brew "yazi"                          # Terminal file manager
 
 # -------------------
-# VS Code Extensions
+# VS Code Extensions (uncomment what you need)
 # -------------------
 vscode "vscodevim.vim"                # Vim integration for VS Code (Neovim is too buggy)
-vscode "golang.go"                    # Go language support
-vscode "rust-lang.rust-analyzer"      # Rust language server
-vscode "ms-playwright.playwright"     # Playwright testing
-vscode "ms-python.debugpy"            # Python debugger
-vscode "charliermarsh.ruff"           # Python linter (ruff)
-vscode "ms-python.python"             # Python support
-vscode "ms-python.vscode-pylance"     # Python language server
-vscode "kingwl.vscode-vitest-runner"  # Vitest test runner
-vscode "vitest.explorer"              # Vitest test explorer
+# vscode "golang.go"                    # Go language support
+# vscode "rust-lang.rust-analyzer"      # Rust language server
+# vscode "ms-playwright.playwright"     # Playwright testing
+# vscode "ms-python.debugpy"            # Python debugger
+# vscode "charliermarsh.ruff"           # Python linter (ruff)
+# vscode "ms-python.python"             # Python support
+# vscode "ms-python.vscode-pylance"     # Python language server
+# vscode "kingwl.vscode-vitest-runner"  # Vitest test runner
+# vscode "vitest.explorer"              # Vitest test explorer
 # vscode "ms-azuretools.vscode-docker"  # Docker support (I frequently use Docker CLI instead)
