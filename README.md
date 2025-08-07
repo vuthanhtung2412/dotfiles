@@ -13,4 +13,4 @@ brew bundle install
 + Hide dock `System Settings -> click Desktop & Dock in the sidebar -> automatically show and hide dock`
 + Disable `Cmd+Space` for spotlight (since I use raycast) : `Settings -> Keyboard shortcut -> spotlight`
 + Make alias of `~` and put it to desktop `Machintosh HD`
-+ Grant disk access to ghostty
++ Grant disk access to ghostty `MacOS Settings => Privacy & Security => Full Disk Access => enable Ghostty via the toggle`
