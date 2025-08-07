@@ -12,3 +12,4 @@ brew bundle install
 + Press right Cmd twice for dictation
 + Hide dock `System Settings -> click Desktop & Dock in the sidebar -> automatically show and hide dock`
 + Disable `Cmd+Space` for spotlight (since I use raycast) : `Settings -> Keyboard shortcut -> spotlight`
++ Make alias of `~` and put it to desktop `Machintosh HD`
