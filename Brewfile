@@ -22,7 +22,6 @@ brew "eza"                           # Modern ls replacement
 brew "bat"                           # Cat clone with syntax highlighting
 brew "fzf"                           # Fuzzy finder for CLI
 brew "tldr"                          # Simplified man pages
-brew "thefuck"                       # Corrects previous command typos
 brew "btop"                          # Resource monitor
 
 # -------------------
@@ -43,7 +42,6 @@ brew "btop"                          # Resource monitor
 # -------------------
 # Development Tools
 # -------------------
-brew "lolcat"                        # For banner display
 brew "git"                           # Version control
 brew "git-lfs"                       # Git Large File Storage
 brew "git-delta"                     # Git diff viewer
