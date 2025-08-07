@@ -43,6 +43,7 @@ brew "btop"                          # Resource monitor
 # -------------------
 # Development Tools
 # -------------------
+brew "lolcat"                        # For banner display
 brew "git"                           # Version control
 brew "git-lfs"                       # Git Large File Storage
 brew "git-delta"                     # Git diff viewer
