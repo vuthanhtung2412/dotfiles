@@ -11,3 +11,4 @@ brew bundle install
 + Create and alias for hard disk in `Desktop`. Finder > Settings > Hard Disks
 + Press right Cmd twice for dictation
 + Hide dock `System Settings -> click Desktop & Dock in the sidebar -> automatically show and hide dock`
++ Disable `Cmd+Space` for spotlight (since I use raycast) : `Settings -> Keyboard shortcut -> spotlight`
