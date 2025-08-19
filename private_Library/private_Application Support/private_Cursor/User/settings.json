@@ -454,4 +454,5 @@
     }
   ],
   "git.openRepositoryInParentFolders": "always",
+  "workbench.editor.showTabs": "none",
 }
