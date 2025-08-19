@@ -10,5 +10,29 @@
     {
         "key": "cmd+r u",
         "command": "-workbench.action.closeUnmodifiedEditors"
-    }
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusBelowGroup"
+    },
 ]

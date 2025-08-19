@@ -6,8 +6,9 @@
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
   "terminal.integrated.sendKeybindingsToShell": true,
   "update.mode": "none",
-  "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "material-icon-theme",
+  "editor.cursorSurroundingLines": 15,
+  "editor.cursorSurroundingLinesStyle": "all",
   "editor.lineNumbers": "relative",
   "vscode-neovim.compositeKeys": {
     "jj": {
@@ -35,8 +36,10 @@
   },
   "vim.easymotion": true,
   "vim.incsearch": true,
+  "vim.timeout": 300,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
+  "vim.leader": "<space>",
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
@@ -49,15 +52,165 @@
       ]
     }
   ],
+  "vim.normalModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
         "<leader>",
+        "c",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "S",
+        "S"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "s",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "<leader>"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r",
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
         "d"
       ],
       "after": [
-        "d",
+        "\"",
+        "_",
         "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "C"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "C"
+      ]
+    },
+    {
+      "before": [
+        "r"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "r"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "|"
+      ],
+      "commands": [
+        "workbench.action.splitEditorRight"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "-"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "-"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
       ]
     },
     {
@@ -70,10 +223,22 @@
     },
     {
       "before": [
-        "K"
+        "O",
+        "O"
       ],
       "commands": [
         "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "o",
+        "o"
+      ],
+      "after": [
+        "o",
+        "<Esc>"
       ],
       "silent": true
     },
@@ -91,6 +256,8 @@
         "D"
       ],
       "after": [
+        "\"",
+        "_",
         "d",
         "$"
       ]
@@ -100,6 +267,8 @@
         "C"
       ],
       "after": [
+        "\"",
+        "_",
         "c",
         "$"
       ]
@@ -115,6 +284,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "d"
       ]
     },
@@ -129,6 +300,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "d"
       ]
     },
@@ -138,9 +311,12 @@
         "i",
         "g"
       ],
-      "commands": [
-        "editor.action.selectAll",
-        "editor.action.clipboardCopyAction"
+      "after": [
+        "g",
+        "g",
+        "y",
+        "G",
+        "<C-o>"
       ]
     },
     {
@@ -149,9 +325,12 @@
         "a",
         "g"
       ],
-      "commands": [
-        "editor.action.selectAll",
-        "editor.action.clipboardCopyAction"
+      "after": [
+        "g",
+        "g",
+        "y",
+        "G",
+        "<C-o>"
       ]
     },
     {
@@ -165,6 +344,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "c"
       ]
     },
@@ -179,6 +360,8 @@
         "V",
         "g",
         "g",
+        "\"",
+        "_",
         "c"
       ]
     },
@@ -210,11 +393,6 @@
       ]
     }
   ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
-  },
   "vim.visualModeKeyBindings": [
     {
       "before": [
@@ -232,5 +410,48 @@
         "editor.action.outdentLines"
       ]
     }
-  ]
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "D"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "D"
+      ]
+    },
+    {
+      "before": [
+        "c"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "C"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "C"
+      ]
+    }
+  ],
+  "git.openRepositoryInParentFolders": "always",
 }
