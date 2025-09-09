@@ -38,6 +38,7 @@ brew "btop"                          # Resource monitor
 # brew "hashicorp/tap/terraform"       # Infrastructure as Code
 # brew "lazydocker"                    # Docker TUI
 # brew "temporal"                      # Workflow orchestration CLI
+brew "pumba"                           # Chaos engineering tool for Docker
 
 # -------------------
 # Development Tools
