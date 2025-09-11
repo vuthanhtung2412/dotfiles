@@ -14,7 +14,6 @@ brew "mise"                          # Version manager for programming languages
 # cask "kitty"                       # Fast, GPU-accelerated terminal emulator
 cask "ghostty"                       # Kitty doesn't support dictation
 brew "antidote"                      # Zsh plugin manager
-brew "oh-my-posh"                    # Prompt theme engine for shells
 brew "tmux"                          # Terminal multiplexer
 brew "tpm"                           # Tmux plugin manager
 brew "zoxide"                        # Smart directory jumper
@@ -23,6 +22,12 @@ brew "bat"                           # Cat clone with syntax highlighting
 brew "fzf"                           # Fuzzy finder for CLI
 brew "tldr"                          # Simplified man pages
 brew "btop"                          # Resource monitor
+
+# -------------------
+# Style
+# -------------------
+brew "oh-my-posh"                    # Prompt theme engine for shells
+brew "lolcat"                        # Terminal text color
 
 # -------------------
 # DevOps and Cloud Tools (uncomment what you need)
@@ -61,6 +66,7 @@ brew "parallel"                      # Parallel command execution
 brew "fd"                            # Fast find alternative
 brew "ripgrep"                       # Fast grep alternative
 brew "websocat"                      # WS testing tool
+brew "mprocs"
 
 # -------------------
 # Media and Content Tools
@@ -104,7 +110,7 @@ cask "font-jetbrains-mono-nerd-font" # Developer-friendly font with ligatures
 # -------------------
 # Networking
 # -------------------
-cask "tailscale"                     # Zero-config VPN
+# cask "tailscale"                     # Zero-config VPN
 cask "keycastr"                      # Keystroke visualizer (useful for presentations)
 
 # -------------------
