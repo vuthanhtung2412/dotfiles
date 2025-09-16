@@ -52,6 +52,7 @@ brew "git"                           # Version control
 brew "git-lfs"                       # Git Large File Storage
 brew "git-delta"                     # Git diff viewer
 brew "lazygit"                       # Git TUI
+brew "pre-commit"                    # Pre-commit hooks
 brew "gh"                            # GitHub CLI
 brew "glab"                          # GitLab CLI
 brew "chezmoi"                       # Dotfile manager
