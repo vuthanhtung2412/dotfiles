@@ -22,6 +22,7 @@ brew "bat"                           # Cat clone with syntax highlighting
 brew "fzf"                           # Fuzzy finder for CLI
 brew "tldr"                          # Simplified man pages
 brew "btop"                          # Resource monitor
+cask "stats"                         # Monitor MAC
 
 # -------------------
 # Style
