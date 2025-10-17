@@ -14,3 +14,4 @@ brew bundle install
 + Disable `Cmd+Space` for spotlight (since I use raycast) : `Settings -> Keyboard shortcut -> spotlight`
 + Make alias of `~` and put it to desktop `Machintosh HD`
 + Grant disk access to ghostty `MacOS Settings => Privacy & Security => Full Disk Access => enable Ghostty via the toggle`
++ `pnpm create @knip/config`
