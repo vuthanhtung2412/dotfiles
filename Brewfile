@@ -69,6 +69,7 @@ brew "fd"                            # Fast find alternative
 brew "ripgrep"                       # Fast grep alternative
 brew "websocat"                      # WS testing tool
 brew "mprocs"
+cask "responsively"
 
 # -------------------
 # Media and Content Tools
