@@ -79,6 +79,7 @@ brew "yt-dlp"                        # YouTube video downloader
 brew "pdfcpu"                        # CLI pdf editor
 # cask "capcut"                        # Video editing software
 # cask "blender"                       # 3D creation suite
+# cask "screen-studio"                 # Edit Software demo
 # cask "obs"                           # Streaming/recording software
 # Note: DaVinci Resolve not available via Homebrew; install manually
 
