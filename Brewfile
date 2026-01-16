@@ -22,7 +22,9 @@ brew "bat"                           # Cat clone with syntax highlighting
 brew "fzf"                           # Fuzzy finder for CLI
 brew "tldr"                          # Simplified man pages
 brew "btop"                          # Resource monitor
-cask "stats"                         # Monitor MAC
+brew "tabiew"
+brew "ninja"                         # C compiler booster
+cask "stats"
 
 # -------------------
 # Style
@@ -91,6 +93,7 @@ cask "raycast"                       # Launcher and productivity tool
 cask "obsidian"                      # Knowledge base and note-taking
 # cask "hoppscotch"                    # API client (alternative to Postman, complements hurl)
 # cask "dbeaver-community"             # SQL client and database admin
+brew "openapi-generator"
 
 # -------------------
 # IDEs and Editors
