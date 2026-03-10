@@ -91,6 +91,11 @@ nnoremap <silent> oo o<Esc>
 " Insert a newline above without entering insert mode
 nnoremap <silent> OO O<Esc>
 
+" Change cursor shape for different modes in most terminals
+let &t_SI = "\e[6 q" " SI = Insert mode (Vertical bar)
+let &t_SR = "\e[4 q" " SR = Replace mode (Underline)
+let &t_EI = "\e[2 q" " EI = Normal mode (Solid block)
+
 " vim diff is not readable in wezterm
 " link : https://stackoverflow.com/questions/2019281/load-different-colorscheme-when-using-vimdiff
 if &diff
