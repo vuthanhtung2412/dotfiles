@@ -85,6 +85,12 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" Insert a newline below without entering insert mode
+nnoremap <silent> oo o<Esc>
+
+" Insert a newline above without entering insert mode
+nnoremap <silent> OO O<Esc>
+
 " vim diff is not readable in wezterm
 " link : https://stackoverflow.com/questions/2019281/load-different-colorscheme-when-using-vimdiff
 if &diff
