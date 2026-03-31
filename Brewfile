@@ -123,7 +123,7 @@ cask "keycastr"                      # Keystroke visualizer (useful for presenta
 # -------------------
 # Databases
 # -------------------
-# brew "postgresql@14"                 # PostgreSQL database
+# brew "postgresql@17"                 # PostgreSQL database
 brew "sqlite"                 # PostgreSQL database
 
 # -------------------
