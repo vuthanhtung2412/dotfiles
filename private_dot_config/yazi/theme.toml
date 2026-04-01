@@ -1,4 +1,4 @@
-# https://github.com/catppuccin/yazi/blob/main/themes/mocha/catppuccin-mocha-lavender.toml
+# https://github.com/catppuccin/yazi/blob/main/themes/mocha/catppuccin-mocha-mauve.toml
 [app]
 overall = { bg = "#1e1e2e" }
 
@@ -11,11 +11,11 @@ find_position = { fg = "#f5c2e7", bg = "reset", italic = true }
 marker_copied   = { fg = "#a6e3a1", bg = "#a6e3a1" }
 marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
 marker_marked   = { fg = "#94e2d5", bg = "#94e2d5" }
-marker_selected = { fg = "#b4befe", bg = "#b4befe" }
+marker_selected = { fg = "#cba6f7", bg = "#cba6f7" }
 
 count_copied   = { fg = "#1e1e2e", bg = "#a6e3a1" }
 count_cut      = { fg = "#1e1e2e", bg = "#f38ba8" }
-count_selected = { fg = "#1e1e2e", bg = "#b4befe" }
+count_selected = { fg = "#1e1e2e", bg = "#cba6f7" }
 
 border_symbol = "│"
 border_style  = { fg = "#7f849c" }
@@ -27,8 +27,8 @@ active   = { fg = "#1e1e2e", bg = "#cdd6f4", bold = true }
 inactive = { fg = "#cdd6f4", bg = "#45475a" }
 
 [mode]
-normal_main = { fg = "#1e1e2e", bg = "#b4befe", bold = true }
-normal_alt  = { fg = "#b4befe", bg = "#313244"}
+normal_main = { fg = "#1e1e2e", bg = "#cba6f7", bold = true }
+normal_alt  = { fg = "#cba6f7", bg = "#313244"}
 
 select_main = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
 select_alt  = { fg = "#a6e3a1", bg = "#313244"}
@@ -38,7 +38,7 @@ unset_alt   = { fg = "#f2cdcd", bg = "#313244"}
 
 [indicator]
 parent = { fg = "#1e1e2e", bg = "#cdd6f4" }
-current = { fg = "#1e1e2e", bg = "#b4befe" }
+current = { fg = "#1e1e2e", bg = "#cba6f7" }
 preview = { fg = "#1e1e2e", bg = "#cdd6f4" }
 
 [status]
@@ -56,29 +56,29 @@ perm_exec  = { fg = "#a6e3a1" }
 perm_sep   = { fg = "#7f849c" }
 
 [input]
-border   = { fg = "#b4befe" }
+border   = { fg = "#cba6f7" }
 title    = {}
 value    = {}
 selected = { reversed = true }
 
 [pick]
-border   = { fg = "#b4befe" }
+border   = { fg = "#cba6f7" }
 active   = { fg = "#f5c2e7" }
 inactive = {}
 
 [confirm]
-border     = { fg = "#b4befe" }
-title      = { fg = "#b4befe" }
+border     = { fg = "#cba6f7" }
+title      = { fg = "#cba6f7" }
 body       = {}
 list       = {}
 btn_yes    = { reversed = true }
 btn_no     = {}
 
 [cmp]
-border = { fg = "#b4befe" }
+border = { fg = "#cba6f7" }
 
 [tasks]
-border  = { fg = "#b4befe" }
+border  = { fg = "#cba6f7" }
 title   = {}
 hovered = { fg = "#f5c2e7", bold = true }
 
@@ -127,13 +127,13 @@ rules = [
 	{ url = "*/", is = "dummy", bg = "#f38ba8" },
 
 	# Fallback
-	{ url = "*/", fg = "#b4befe" },
+	{ url = "*/", fg = "#cba6f7" },
 ]
 
 [spot]
-border = { fg = "#b4befe" }
-title  = { fg = "#b4befe" }
-tbl_cell = { fg = "#b4befe", reversed = true }
+border = { fg = "#cba6f7" }
+title  = { fg = "#cba6f7" }
+tbl_cell = { fg = "#cba6f7", reversed = true }
 tbl_col = { bold = true }
 
 [icon]
@@ -772,20 +772,43 @@ exts = [
 ]
 
 # https://github.com/yazi-rs/flavors/blob/main/catppuccin-mocha.yazi/flavor.toml
+dirs = [
+	# System & Config (Pink/Flamingo accents)
+	{ name = ".config", text = "", fg = "#f5c2e7" },
+	{ name = ".git", text = "", fg = "#eba0ac" },
+	{ name = ".github", text = "", fg = "#eba0ac" },
+	{ name = ".npm", text = "", fg = "#f2cdcd" },
+	
+	# Primary Navigation (Mauve/Lavender)
+	{ name = "Desktop", text = "", fg = "#cba6f7" },
+	{ name = "dev", text = "", fg = "#cba6f7" },
+	
+	# Media & Content (Blue/Sapphire/Teal for "Cool" tones)
+	{ name = "Documents", text = "", fg = "#89b4fa" },
+	{ name = "Downloads", text = "", fg = "#89dceb" },
+	{ name = "Library", text = "", fg = "#89b4fa" },
+	{ name = "Movies", text = "", fg = "#74c7ec" },
+	{ name = "Music", text = "", fg = "#74c7ec" },
+	{ name = "Pictures", text = "", fg = "#94e2d5" },
+	{ name = "Videos", text = "", fg = "#74c7ec" },
+	{ name = "Public", text = "", fg = "#a6e3a1" },
+]
+
 conds = [
-	# Special files
-	{ if = "orphan", text = "", fg = "#cdd6f4" },
-	{ if = "link", text = "", fg = "#7f849c" },
-	{ if = "block", text = "", fg = "#f2cdcd" },
-	{ if = "char", text = "", fg = "#f2cdcd" },
-	{ if = "fifo", text = "", fg = "#f2cdcd" },
-	{ if = "sock", text = "", fg = "#f2cdcd" },
-	{ if = "sticky", text = "", fg = "#f2cdcd" },
-	{ if = "dummy", text = "", fg = "#f38ba8" },
+	# Special files (Warm accents to stand out)
+	{ if = "orphan", text = "", fg = "#fab387" }, # Peach (Alerts you it's broken)
+	{ if = "link", text = "", fg = "#89dceb" },   # Sky (Standard link color)
+	{ if = "block", text = "", fg = "#f2cdcd" },  # Flamingo
+	{ if = "char", text = "", fg = "#f2cdcd" },   # Flamingo
+	{ if = "fifo", text = "", fg = "#f2cdcd" },   # Flamingo
+	{ if = "sock", text = "", fg = "#f2cdcd" },   # Flamingo
+	{ if = "sticky", text = "", fg = "#f2cdcd" }, # Flamingo
+	{ if = "dummy", text = "", fg = "#f38ba8" },  # Red (Critical error)
 
 	# Fallback
-	{ if = "dir & hovered", text = "", fg = "#b4befe" },
-	{ if = "dir", text = "", fg = "#b4befe" },
-	{ if = "exec", text = "", fg = "#a6e3a1" },
-	{ if = "!dir", text = "", fg = "#cdd6f4" },
+  # hovered is not working yet 
+	{ if = "dir & hovered", text = "", fg = "#cba6f7" },
+	{ if = "dir", text = "", fg = "#cba6f7" },    # Directories remain Mauve
+	{ if = "exec", text = "", fg = "#a6e3a1" },   # Green (Industry standard for execs)
+	{ if = "!dir", text = "", fg = "#cdd6f4" },   # Text (Subtle white for files)
 ]
