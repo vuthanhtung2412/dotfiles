@@ -4,6 +4,7 @@
     pager = delta
     fsmonitor = true
     untrackedCache = true
+    hooksPath = /Users/tung.vuthanh/.git-hooks
 
 [column]
     ui = auto
