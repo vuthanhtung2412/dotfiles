@@ -24,6 +24,7 @@ brew "tldr"                          # Simplified man pages
 brew "btop"                          # Resource monitor
 brew "tabiew"
 brew "ninja"                         # C compiler booster
+brew "gitleaks"
 cask "stats"
 
 # -------------------
@@ -71,7 +72,6 @@ brew "fd"                            # Fast find alternative
 brew "ripgrep"                       # Fast grep alternative
 brew "websocat"                      # WS testing tool
 brew "mprocs"
-cask "responsively"
 
 # -------------------
 # Media and Content Tools
@@ -81,7 +81,6 @@ brew "yt-dlp"                        # YouTube video downloader
 brew "pdfcpu"                        # CLI pdf editor
 # cask "capcut"                        # Video editing software
 # cask "blender"                       # 3D creation suite
-# cask "screen-studio"                 # Edit Software demo
 # cask "obs"                           # Streaming/recording software
 # Note: DaVinci Resolve not available via Homebrew; install manually
 
@@ -123,7 +122,7 @@ cask "keycastr"                      # Keystroke visualizer (useful for presenta
 # -------------------
 # Databases
 # -------------------
-# brew "postgresql@17"                 # PostgreSQL database
+brew "postgresql@17"                 # PostgreSQL database
 brew "sqlite"                 # PostgreSQL database
 
 # -------------------
