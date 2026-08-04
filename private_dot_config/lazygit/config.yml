@@ -1,3 +1,5 @@
+# Lazygit config for macOS
+# https://github.com/jesseduffield/lazygit/blob/a4ecd293f9d3178cefc6592deabeb262205e134a/docs/Config.md?plain=1#L6
 git:
   pagers:
     - colorArg: "always"
