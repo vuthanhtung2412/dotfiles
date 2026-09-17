@@ -3,6 +3,7 @@
 ```
 chezmoi init --apply vuthanhtung2412
 brew bundle install
+
 ```
 # Mac further config
 
@@ -15,6 +16,7 @@ brew bundle install
 + Make alias of `~` and put it to desktop `Machintosh HD`
 + Grant disk access to ghostty `MacOS Settings => Privacy & Security => Full Disk Access => enable Ghostty via the toggle`
 + `pnpm create @knip/config`
++ Create a `~/knowledge_based` obsidian vault
 + Add following to vimium config
 ```
 # Insert your preferred key mappings here.
