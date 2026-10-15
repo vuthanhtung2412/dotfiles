@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest", "--acceptInsecureCerts"]
+    },
+    "lsp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "lsp-mcp-server"],
+      "env": {
+        "LSP_LOG_LEVEL": "info"
+      }
+    }
+  }
+}
