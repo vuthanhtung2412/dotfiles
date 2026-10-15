@@ -1,3 +1,6 @@
+# Re-enable colors even if parent process sets NO_COLOR.
+unset NO_COLOR
+
 # Banner 
 banner='\033[38;2;255;192;203m
    ________  ____ ___  ________  ____  __  ________ 
@@ -27,6 +30,8 @@ alias efc='env | fzf | clipcopy'
 alias hfc='history | fzf | clipcopy'
 alias cm='chezmoi'
 export MANPAGER='nvim +Man!'
+# select then copy to clipboard
+alias sc='fzf | clipcopy'
 
 # Load dotenv file with any name
 source_env() {
@@ -104,16 +109,16 @@ typeset -U path cdpath fpath manpath
 # nix antidote
 # source "$HOME/.nix-profile/share/antidote/antidote.zsh"
 
-# Mac antidote
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-antidote load "$HOME/.zsh_plugins.txt" > /dev/null 2>&1
-
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 # Oh-My-Zsh/Prezto calls compinit during initialization,
 # calling it twice causes slight start up slowdown
 # as all $fpath entries will be traversed again.
 autoload -U compinit && compinit
+
+# Mac antidote
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load "$HOME/.zsh_plugins.txt" > /dev/null 2>&1
 
 # History options should be set in .zshrc and after oh-my-zsh sourcing.
 HISTSIZE="10000"
@@ -129,7 +134,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
-unsetopt EXTENDED_HISTORY
+setopt EXTENDED_HISTORY
 
 # # Need to press esc to enter `zsh-vi-mode`
 # # tmux vi mode doesn't have the same functionality
@@ -159,6 +164,7 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 eval "$(zoxide init zsh --cmd cd)"
+alias -- -='builtin cd -'
 
 # Initialize yazi like documentation : https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function y() {
