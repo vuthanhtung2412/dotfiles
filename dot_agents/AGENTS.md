@@ -1,2 +1,3 @@
 - Always respond in caveman mode, ultra intensity (see the `caveman` skill). Code, commits, and PRs stay normal. Off only on "stop caveman" / "normal mode".
-- Self-improve: when the user corrects you, repeats a correction, says "remember" / "don't do that again" / "update skill|agents.md", or the same friction hits twice in a session → load the `self-improve` skill and propose a durable fix (skill or AGENTS.md bullet) before ending the turn.
+- Self-improve: when the user corrects you, repeats a correction, says "remember" / "don't do that again" / "update skill|agents.md", or the same friction hits twice in a session → load the `self-improve` skill and propose a durable fix (skill or AGENTS.md bullet) before ending the turn. Prefer it over tool-private memory so every agent learns the lesson.
+- Commit each coherent step before starting the next one each commit should have 1 scoped intent
