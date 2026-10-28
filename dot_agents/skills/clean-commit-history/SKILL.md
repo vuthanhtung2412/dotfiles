@@ -18,11 +18,12 @@ Sibling skills: `plan-by-commit` (plan before coding), `caveman-commit` (one mes
 2. **Mostly fixup + squash.** Default tool is fold: `fixup` / `squash` into the commit that **owns the intent** — often **not** the direct neighbor. Place the `fixup`/`squash` line **immediately under** that earlier `pick` (autosquash does this). Distant fold is normal, frequent, and still a quiet op.
 3. **Highlight non-squash ops.** Call out anything that is *not* `pick` / `fixup` / `squash` — `reword`, `edit` (**SPLIT** / stop to restage), `drop`, moving a **`pick`** (**REORDER**), or full **RESET-rebuild**. Relocating a `fixup`/`squash` under its target is **not** surgery — optional `# → <targetsha>` comment is enough.
 4. **One intent per commit.** Subject needs "and" → **SPLIT** (highlight).
-5. **Merge locals.** Commit touches one unit (one component / service / DB repository) → **fixup/squash into the earlier commit for that same unit**, wherever it sits in the stack (not only adjacent).
-6. **Dependencies forward.** Shared types/schema/utils before consumers. Moving a **`pick`** for this = **REORDER** (highlight).
-7. **Each SHA typechecks alone.** Tip lint/format clean is enough — no per-SHA lint hunt.
-8. **Final tree unchanged** unless user asks to change code.
-9. **No silent shared rewrite.** Pushed branch → explicit OK + `--force-with-lease`. Never force-push `main`/`master`. Trust mode covers plan approval, **not** force-push to shared `main`/`master`.
+5. **No dead-code commits.** New code must ship with its usage (endpoint, GraphQL resolver, frontend feature, caller). Schema/types/utils-only commits → **fixup/squash into** the commit that first uses them. Prefer fold over leaving an unused layer in history.
+6. **Merge locals.** Commit touches one unit (one component / service / DB repository) → **fixup/squash into the earlier commit for that same unit**, wherever it sits in the stack (not only adjacent).
+7. **Dependencies forward.** Shared types/schema/utils before (or folded into) consumers. Moving a **`pick`** for this = **REORDER** (highlight). Unused-only layer = fold (rule 5), not a standalone pick.
+8. **Each SHA typechecks alone.** Tip lint/format clean is enough — no per-SHA lint hunt.
+9. **Final tree unchanged** unless user asks to change code.
+10. **No silent shared rewrite.** Pushed branch → explicit OK + `--force-with-lease`. Never force-push `main`/`master`. Trust mode covers plan approval, **not** force-push to shared `main`/`master`.
 
 ### Trust mode
 
@@ -41,8 +42,8 @@ Always present (trust mode too) as three rebase-i blocks. Reader assumed fluent 
 base: <base>  ANCHOR: <shortsha>  mode: ask|trust
 
 # ── before (all pick) ─────────────────────────────────────────
-pick a1b2c3d feat(db): add EditAction table
-pick c0d1e2f feat(db): add EditAction types
+pick a1b2c3d feat(db): add EditAction table           # dead until used
+pick c0d1e2f feat(db): add EditAction types           # dead until used
 pick e1e2e3e feat(api): persist actions on save
 pick b7c8d9e feat: persist on save and show panel
 pick d4e5f6a fix typo in migration
@@ -50,20 +51,18 @@ pick f0f1f2f tweak EditAction table naming
 pick f9f0f1f WIP scratch
 
 # ── staging (reorder + fixup; e = split) ───────────────────────
-pick a1b2c3d feat(db): add EditAction table
+pick e1e2e3e feat(api): persist actions on save
+fixup a1b2c3d feat(db): add EditAction table          # fold dead into first use
+fixup c0d1e2f feat(db): add EditAction types
 fixup d4e5f6a fix typo in migration
 fixup f0f1f2f tweak EditAction table naming
-pick c0d1e2f feat(db): add EditAction types          # moved up (REORDER)
-pick e1e2e3e feat(api): persist actions on save
 edit b7c8d9e feat: persist on save and show panel    # e: SPLIT
 #    → pick _ feat(api): persist on save
 #    → pick _ feat(ui): show panel
 drop f9f0f1f WIP scratch                             # DROP
 
 # ── after (target log) ────────────────────────────────────────
-pick _ feat(db): add EditAction table
-pick _ feat(db): add EditAction types
-pick _ feat(api): persist actions on save
+pick _ feat(api): persist actions on save            # table+types+usage together
 pick _ feat(api): persist on save
 pick _ feat(ui): show panel
 ```

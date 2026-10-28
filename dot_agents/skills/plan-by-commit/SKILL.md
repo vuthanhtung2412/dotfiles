@@ -21,6 +21,7 @@ description: Write plan with good engineering practice. Use when the user asks f
   - Each commit only resolve 1 concern
   - No unnecessary refactors/formatting unless specified.
   - Order commits so earlier ones compile/run and **releasable**.
+- **No dead-code commits.** New code must ship with its usage in the same commit (endpoint, GraphQL resolver, frontend feature, caller). Schema/types/utils alone → fold into the commit that first uses them. No “add X then wire X later” split.
 - Use Conventional Commits:
   - `fix(scope): ...`
   - `feat(scope): ...`
